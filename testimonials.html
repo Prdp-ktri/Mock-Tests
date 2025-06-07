@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1200px;
+      background-color: white;
+      margin: 50px 0;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    .testi,
+    .customers {
+      color: rgb(0, 255, 170);
+      margin: 0;
+    }
+
+    .customers {
+      color: gray;
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+
+    hr {
+      width: 50px;
+      margin: 10px auto 30px;
+      border: 2px solid gray;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid lightgray;
+      border-radius: 10px;
+      flex: 1 1 280px;
+      max-width: 350px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .inverted {
+      background-color: rgb(0, 255, 170);
+      width: 25%;
+      margin-left: -271px;
+      margin-top: -20px;
+      border-radius: 0 0 360px 0;
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
+    }
+
+    .inverted img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .tagline {
+      color: rgb(0, 255, 170);
+      font-size: 1.2rem;
+      margin: 15px 0 10px;
+    }
+
+    .text {
+      color: gray;
+      font-size: 0.95rem;
+      margin: 0 0 20px;
+    }
+
+    .card img.person {
+      border-radius: 50%;
+      border: 1px solid lightgray;
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .card:has(.inverted:hover) {
+      background-color: rgb(0, 255, 170);
+      color: white;
+      cursor: pointer;
+    }
+
+    .card:has(.inverted:hover) .tagline,
+    .card:has(.inverted:hover) .text,
+    .card:has(.inverted:hover) .name1,
+    .card:has(.inverted:hover) .post {
+      color: white;
+    }
+
+    .card .post {
+      color: gray;
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .customers {
+        font-size: 1.5rem;
+      }
+
+      .tagline {
+        font-size: 1rem;
+      }
+
+      .text {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 15px;
+      }
+
+      .text {
+        font-size: 0.85rem;
+      }
+
+      .container {
+        padding: 20px 10px;
+      }
+    }
+
+    .name1 {
+      color: rgb(0, 255, 170);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p class="testi">Testimonials</p>
+    <h2 class="customers">What our customers say</h2>
+    <hr />
+
+    <div class="cards">
+      <div class="card">
+        <div class="inverted">
+          <img src="invertedcommas.png" alt="Inverted Commas" />
+        </div>
+        <h3 class="tagline">Love the simplicity</h3>
+        <p class="text">They understood our bond and created a stunning website design. Professional, responsive, and
+          on-time delivery. Highly recommended!</p>
+        <img src="person1.jpg" alt="Person1" class="person" />
+        <h2 class="name1">Rita Joseph</h2>
+        <h3 class="post">Managing Director</h3>
+      </div>
+
+      <div class="card">
+        <div class="inverted">
+          <img src="invertedcommas.png" alt="Inverted Commas" />
+        </div>
+        <h3 class="tagline">Excellent Designs</h3>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam ad sint vel, placeat quos ut?
+          Ipsum, laudantium autem consectetur similique saepe quae earum.</p>
+        <img src="person2.jpg" alt="Person2" class="person" />
+        <h2 class="name1">George Joshi</h2>
+        <h3 class="post">CFO & Founder</h3>
+      </div>
+
+      <div class="card">
+        <div class="inverted">
+          <img src="invertedcommas.png" alt="Inverted Commas" />
+        </div>
+        <h3 class="tagline">Efficient and Reliable</h3>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam ad sint vel, placeat quos ut?
+          Ipsum, laudantium autem consectetur similique saepe quae earum.</p>
+        <img src="person3.jpg" alt="Person3" class="person" />
+        <h2 class="name1">Clay Washington</h2>
+        <h3 class="post">Fashion Designer</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
