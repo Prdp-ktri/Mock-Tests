@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .circle-1 {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: linear-gradient(to right, purple, pink);
+      position: relative;
+      top: 150px;
+      margin-left: 250px;
+    }
+
+    .circle-2 {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: linear-gradient(to right, pink, purple);
+      position: relative;
+      top: 130px;
+      right: -950px;
+    }
+
+    .master-card {
+      width: 700px;
+      height: 350px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: 12px;
+      color: white;
+      border-radius: 50px;
+      margin-left: 450px;
+      z-index: 10;
+      position: relative;
+      top: -400px;
+      margin-left: 425px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .master-card h3 {
+      top: 50px;
+      position: relative;
+    }
+
+    #chip {
+      width: 50px;
+      height: 50px;
+      border-radius: 15px;
+      position: relative;
+      right: -600px;
+      top: 25px;
+    }
+
+    .orange-circle {
+      width: 50px;
+      height: 50px;
+      background-color: orange;
+      border-radius: 50%;
+      position: relative;
+      margin-top: 25px;
+    }
+
+    .yellow-circle {
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      border-radius: 50%;
+      position: relative;
+      margin-top: 25px;
+      right: -100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="circle-1"></div>
+  <div class="circle-2"></div>
+
+
+  <div class="master-card">
+    <div class="orange-circle"></div>
+    <div class="yellow-circle"></div><img src="chip.png" alt="Chip" id="chip">
+    <h3>Master Card</h3>
+
+    <p id="designation">Chief Officer</p>
+    <h3 class="card-number">8050 5040 2030 3020</h3>
+
+    <h3 class="name">Prem Kumar Shah</h3>
+  </div>
+
+
+</body>
+
+</html>
