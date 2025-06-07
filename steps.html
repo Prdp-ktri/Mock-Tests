@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .outer-circle-1 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .inner-circle-1 {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      overflow: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    h2.first {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    p.firstText {
+      font-size: 12px;
+      margin: 0;
+      line-height: 1.2;
+      padding: 0 5px;
+    }
+
+    .firstSpan {
+      font-size: 40px;
+      position: relative;
+      color: red;
+      top: 0;
+      right: 0;
+    }
+
+    .outer-circle-2 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-circle-2 {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .outer-circle-3 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-circle-3 {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .outer-circle-4 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-circle-4 {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .outer-circle-5 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-circle-5 {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .outer-circle-6 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-circle-6 {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-top: 5px;
+      color: gray;
+    }
+
+    p {
+      margin-top: -20px;
+      color: gray;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 750px;
+      gap: 25px;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .first {
+      top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="outer-circle-1">
+      <div class="inner-circle-1">
+        <img src="cycling.png" alt="cycling">
+        <h2 class="first">Step 1 <span class="firstSpan">1</span></h2>
+        <p class="firstText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="outer-circle-2">
+      <div class="inner-circle-2">
+        <img src="car.png" alt="car">
+        <h2>Step 2 <span class="secondSpan">2</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="outer-circle-3">
+      <div class="inner-circle-3">
+        <img src="helicopter.png" alt="helicopter">
+        <h2>Step 3 <span class="thirdSpan">3</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="outer-circle-4">
+      <div class="inner-circle-4">
+        <img src="plane.png" alt="plane">
+        <h2>Step 4 <span class="fourthSpan">4</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="outer-circle-5">
+      <div class="inner-circle-5">
+        <img src="shuttle.png" alt="shuttle">
+        <h2>Step 5 <span class="fifthSpan">5</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="outer-circle-6">
+      <div class="inner-circle-6">
+        <img src="bus.png" alt="bus">
+        <h2>Step 6 <span class="sixthSpan">6</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
