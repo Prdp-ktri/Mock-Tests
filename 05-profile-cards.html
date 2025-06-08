@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .profile-1,
+    .profile-2,
+    .profile-3 {
+      background-color: rgb(3, 0, 56);
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cover {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .pp {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: -35px 0 0 15px;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+
+    .pName {
+      margin: 10px 0 0 15px;
+      font-size: 1.2rem;
+    }
+
+    .post {
+      margin: 2px 0 0 15px;
+      font-size: 0.9rem;
+      color: cyan;
+    }
+
+    .bio {
+      margin: 10px 15px;
+      font-family: 'Winky Rough', cursive;
+      font-size: 0.9rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin: 0 0 15px 15px;
+    }
+
+    .btn-follow,
+    .btn-mi {
+      padding: 8px 12px;
+      border: 1px solid;
+      background-color: rgb(0, 22, 35);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .btn-follow {
+      color: cyan;
+      border-color: cyan;
+      position: relative;
+      margin-left: 1vw;
+    }
+
+    .btn-follow:hover {
+      cursor: pointer;
+      background-color: cyan;
+      color: rgb(0, 22, 35);
+      border-color: cyan;
+    }
+
+    .btn-mi {
+      color: white;
+      border-color: white;
+      position: relative;
+      right: -150px;
+      top: -35px;
+    }
+
+    .btn-mi:hover {
+      cursor: pointer;
+      background-color: white;
+      color: rgb(0, 22, 35);
+      border-color: white;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-1,
+      .profile-2,
+      .profile-3 {
+        width: 90%;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="profile-1">
+      <img src="wallpaper-1.jpg" alt="Snow Mountains" class="cover">
+      <img src="pankaj.jpg" alt="Pankaj profile pic" class="pp">
+      <h2 class="pName">Hans Down</h2>
+      <h6 class="post">Engineer</h6>
+      <p class="bio">I'm looking for something that can deliver a 50-pound payload of snow on a small feminine target.
+        Can you suggest?</p>
+      <button class="btn-follow">FOLLOW</button><button class="btn-mi">MORE INFO</button>
+    </div>
+    <div class="profile-2">
+      <img src="wallpaper-2.jpg" alt="Way towards Ocean" class="cover">
+      <img src="Nayantara.jpg" alt="Nayan profile pic" class="pp">
+      <h2 class="pName">Wisteria Widget</h2>
+      <h6 class="post">Photographer</h6>
+      <p class="bio">Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you?</p>
+      <button class="btn-follow">FOLLOW</button><button class="btn-mi">MORE INFO</button>
+    </div>
+    <div class="profile-3">
+      <img src="wallpaper-3.jpg" alt="Lake" class="cover">
+      <img src="josh.jpg" alt="Josh profile pic" class="pp">
+      <h2 class="pName">Desmond Eagle</h2>
+      <h6 class="post">Accountant</h6>
+      <p class="bio">If you want to stay dad you've got to polish your image. I think the image we need to create for
+        you is "repentant but learning".</p>
+      <button class="btn-follow">FOLLOW</button><button class="btn-mi">MORE INFO</button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+    body {
+      background-color: rgb(255, 211, 219);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 25px;
+      position: relative;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .shoe-w-sizes {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .shoe-pic {
+      width: 400px;
+      height: 400px;
+      border-radius: 25px;
+    }
+
+    .sizes {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    .size-caption {
+      font-size: 20px;
+      color: rgb(189, 152, 159);
+      position: relative;
+      left: -195px;
+      font-family: Outfit;
+    }
+
+    .size-number:hover {
+      background-color: rgb(189, 152, 159);
+      color: white;
+      cursor: pointer;
+      border: 2px solid rgb(189, 152, 159);
+      border-radius: 5px;
+    }
+
+    .size-number {
+      width: 50px;
+      height: 50px;
+      border: 2px solid rgb(189, 152, 159);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: rgb(189, 152, 159);
+    }
+
+    .sizes {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .shoe-description {
+      display: block;
+      width: 40%;
+    }
+
+    .type {
+      margin-top: 80px;
+      color: rgb(189, 152, 159);
+      font-family: Outfit;
+    }
+
+    .price {
+      color: rgb(189, 152, 159);
+      font-family: Outfit;
+    }
+
+    .product {
+      color: rgb(121, 121, 121);
+      font-family: Outfit;
+    }
+
+    .shoe-details {
+      color: rgb(121, 121, 121);
+      font-size: 20px;
+      margin-right: 5px;
+      font-family: Outfit;
+    }
+
+    .cart {
+      margin-top: 15px;
+      width: 200px;
+      height: 50px;
+      background-color: rgb(189, 152, 159);
+      border: 0;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      font-family: Outfit;
+    }
+
+    .wishlist {
+      margin-top: 15px;
+      margin-left: 1px;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(189, 152, 159);
+      border: 0;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+    }
+
+    .wishlist:hover {
+      background-color: white;
+      border: 1px solid rgb(189, 152, 159);
+      cursor: pointer;
+    }
+
+    .cart:hover {
+      background-color: white;
+      color: rgb(189, 152, 159);
+      border: 1px solid rgb(189, 152, 159);
+      cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .shoe-w-sizes,
+      .shoe-description {
+        width: 100%;
+      }
+
+      .shoe-pic {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      .size-caption {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .sizes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .shoe-details {
+        font-size: 16px;
+      }
+
+      .cart,
+      .wishlist {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .wishlist {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .shoe-pic {
+        max-width: 250px;
+      }
+
+      .size-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      .cart {
+        font-size: 18px;
+        height: 45px;
+      }
+
+      .wishlist {
+        height: 45px;
+        font-size: 18px;
+      }
+
+      .type,
+      .product,
+      .price,
+      .shoe-details {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="shoe-w-sizes">
+      <img src="shoes-nike.jpg" alt="Nike Women Shoes" class="shoe-pic"><br>
+      <div class="size-caption">CHOOSE SIZE</div>
+      <div class="sizes">
+        <div class="size-number">5</div>
+        <div class="size-number">6</div>
+        <div class="size-number">7</div>
+        <div class="size-number">8</div>
+        <div class="size-number">9</div>
+        <div class="size-number">10</div>
+        <div class="size-number">11</div>
+        <div class="size-number">12</div>
+      </div>
+    </div>
+
+    <div class="shoe-description">
+      <p class="type">WOMEN'S RUNNING SHOES</p>
+      <h1 class="product"> NIKE EPIC REACT <br>FLYKNIT</h1>
+      <h1 class="price">$150</h1>
+      <p class="shoe-details">The Nike Epic React Flyknit foam cushioning is responsive yet light-weight, durable yet
+        soft. This creates a sensation that not only enhances the feeling of moving forward, but makes running feel fun,
+        too.</p>
+      <button class="cart">ADD TO CART</button><button class="wishlist">♥️</button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
