@@ -9,94 +9,132 @@
   <style>
     body {
       background-color: black;
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .background-circles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .circle {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 0;
     }
 
     .circle-1 {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
       background: linear-gradient(to right, purple, pink);
-      position: relative;
-      top: 150px;
-      margin-left: 250px;
+      top: -150px;
+      left: 460px;
     }
 
     .circle-2 {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
       background: linear-gradient(to right, pink, purple);
-      position: relative;
-      top: 130px;
-      right: -950px;
+      top: 225px;
+      right: 450px;
     }
 
     .master-card {
+      position: relative;
+      margin: 200px auto;
       width: 700px;
       height: 350px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(50px);
-      -webkit-backdrop-filter: 12px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
       color: white;
-      border-radius: 50px;
-      margin-left: 450px;
-      z-index: 10;
-      position: relative;
-      top: -400px;
-      margin-left: 425px;
+      padding: 30px;
+      z-index: 1;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
-    .master-card h3 {
-      top: 50px;
-      position: relative;
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    #chip {
-      width: 50px;
-      height: 50px;
-      border-radius: 15px;
+    .logo {
       position: relative;
-      right: -600px;
-      top: 25px;
+      display: flex;
+      align-items: center;
+    }
+
+    .orange-circle,
+    .yellow-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
     }
 
     .orange-circle {
-      width: 50px;
-      height: 50px;
       background-color: orange;
-      border-radius: 50%;
-      position: relative;
-      margin-top: 25px;
+      z-index: 2;
     }
 
     .yellow-circle {
-      width: 50px;
-      height: 50px;
       background-color: yellow;
-      border-radius: 50%;
-      position: relative;
-      margin-top: 25px;
-      right: -100px;
+      margin-left: -10px;
+      z-index: 1;
+    }
+
+    #chip {
+      width: 60px;
+      height: 60px;
+      margin-top: 10px;
+    }
+
+    .brand {
+      margin-top: 10px;
+      font-size: 24px;
+    }
+
+    .designation {
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .card-number {
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    .name {
+      font-size: 20px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="circle-1"></div>
-  <div class="circle-2"></div>
+  <div class="background-circles">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+  </div>
 
 
   <div class="master-card">
-    <div class="orange-circle"></div>
-    <div class="yellow-circle"></div><img src="chip.png" alt="Chip" id="chip">
-    <h3>Master Card</h3>
+    <div class="card-header">
+      <div class="logo">
+        <div class="orange-circle"></div>
+        <div class="yellow-circle"></div>
+      </div>
+      <img src="chip.png" alt="Chip" id="chip">
+    </div>
 
-    <p id="designation">Chief Officer</p>
+    <h3 class="brand">Master Card</h3>
+    <p id="designation">Card Number</p>
     <h3 class="card-number">8050 5040 2030 3020</h3>
-
     <h3 class="name">Prem Kumar Shah</h3>
   </div>
 
