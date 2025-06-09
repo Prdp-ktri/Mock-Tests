@@ -11,25 +11,26 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
     }
 
     .inner-circle-1 {
       width: 175px;
       height: 175px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       text-align: center;
+      position: relative;
       overflow: hidden;
+      font-weight: bolder;
       padding: 10px;
       box-sizing: border-box;
     }
@@ -50,55 +51,55 @@
       font-size: 120px;
       position: absolute;
       color: red;
-      top: 75px;
-      right: 950px;
+      bottom: 20px;
+      right: -10px;
     }
 
     .secondSpan {
       font-size: 120px;
       position: absolute;
       color: rgb(221, 181, 0);
-      top: 75px;
-      right: 710px;
+      bottom: 20px;
+      right: -10px;
     }
 
     .thirdSpan {
       font-size: 120px;
       position: absolute;
       color: rgb(51, 161, 51);
-      top: 75px;
-      right: 480px;
+      top: 20px;
+      right: -10px;
     }
 
     .fourthSpan {
       font-size: 120px;
       position: absolute;
       color: skyblue;
-      top: 310px;
-      right: 940px;
+      top: 20px;
+      right: -10px;
     }
 
     .fifthSpan {
       font-size: 120px;
       position: absolute;
       color: rgb(255, 136, 0);
-      top: 310px;
-      right: 710px;
+      top: 20px;
+      right: -10px;
     }
 
     .sixthSpan {
       font-size: 120px;
       position: absolute;
       color: orangered;
-      top: 310px;
-      right: 480px;
+      top: 20px;
+      right: -10px;
     }
 
     .outer-circle-2 {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center;
@@ -109,19 +110,21 @@
       width: 175px;
       height: 175px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .outer-circle-3 {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center;
@@ -132,19 +135,21 @@
       width: 175px;
       height: 175px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .outer-circle-4 {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center;
@@ -155,19 +160,21 @@
       width: 175px;
       height: 175px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .outer-circle-5 {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center;
@@ -178,19 +185,21 @@
       width: 175px;
       height: 175px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .outer-circle-6 {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center;
@@ -201,12 +210,14 @@
       width: 175px;
       height: 175px;
       border-radius: 50%;
-      border: 1px solid gray;
+      border: 0 solid gray;
       box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     img {
@@ -251,8 +262,9 @@
     <div class="outer-circle-1">
       <div class="inner-circle-1">
         <img src="cycling.png" alt="cycling">
-        <h2 class="first">Step 1 <span class="firstSpan">1</span></h2>
-        <p class="firstText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h2 class="first">Step 1</h2>
+        <p class="firstText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="firstSpan">1</span>
+        </p>
       </div>
     </div>
 
