@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .social-1 {
+      width: 300px;
+      height: 350px;
+      border: 5px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .icon {
+      width: 150px;
+      height: 150px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      width: 150px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      font-weight: bolder;
+      font-size: 15px;
+      margin-top: 25px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 1100px;
+      height: 800px;
+      background-color: bisque;
+    }
+
+    .txt {
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Responsive Card CSS</h1>
+  <div class="container">
+
+  </div>
+
+
+
+
+  <script>
+
+    let html = "";
+    let imgSrc = ["x.png", "facebook.png", "instagram.png", "reddit.png", "youtube.png", "pinterest.png"];
+    let socials = ["X", "Facebook", "Instagram", "Reddit", "Youtube", "Pinterest"];
+
+    for (let i = 0; i <= 5; i++) {
+      html = html + `<div class="social-1">
+    <img src="${imgSrc[i]}" alt="${socials[i]}" class="icon">
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, ullam!</p>
+    <button class="btn">Read More</button>
+  </div>`
+    }
+
+    document.querySelector('.container').innerHTML = html;
+
+  </script>
+
+</body>
+
+</html>
