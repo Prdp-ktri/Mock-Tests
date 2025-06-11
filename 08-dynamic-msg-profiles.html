@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 300px;
+      left: 150px;
+    }
+
+    .triangle {
+      height: 0;
+      width: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 300px solid cyan;
+      position: absolute;
+      top: 300px;
+      left: 600px;
+    }
+
+    .first {
+      width: 300px;
+      height: 300px;
+      background-color: rgb(145, 145, 145, 0.3);
+      backdrop-filter: blur(25px);
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 25px;
+      margin-top: 50px;
+      color: white;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border: 5px solid white;
+      border-radius: 50%;
+    }
+
+    .post {
+      margin-top: -15px;
+    }
+
+    .msg-btn {
+      background-color: white;
+      width: 120px;
+      height: 50px;
+      border: 0 solid white;
+      color: black;
+      font-weight: bolder;
+      border-radius: 5px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="circle"></div>
+  <div class="triangle"></div>
+
+  <div class="container">
+
+  </div>
+
+
+
+  <script>
+
+    let positions = ["first", "second", "third"];
+    let images = ["person1.jpg", "person2.jpg", "person3.jpg"];
+    let names = ["Jimmie Wilson", "Zoe Olivia", "David Brown"];
+    let designation = ["Software Developer", "Front-End Developer", "Graphic Designer"];
+
+    html = "";
+    for (let i = 0; i <= 2; i++) {
+      html = html + `<div class="first">
+    <img src="${images[i]}" alt="person" width="100px" height="100px">
+    <h2 class="name">${names[i]}</h2>
+    <h3 class="post">${designation[i]}</h3>
+    <button class="msg-btn">Message</button>
+  </div>`
+    }
+
+    document.querySelector('.container').innerHTML = html;
+
+  </script>
+
+</body>
+
+</html>
