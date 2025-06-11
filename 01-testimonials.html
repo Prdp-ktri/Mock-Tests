@@ -65,6 +65,7 @@
       flex-direction: column;
       align-items: center;
       overflow: hidden;
+      position: relative;
     }
 
     .inverted {
@@ -108,17 +109,57 @@
       font-size: 1.1rem;
     }
 
-    .card:has(.inverted:hover) {
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
       background-color: rgb(0, 255, 170);
-      color: white;
-      cursor: pointer;
+      z-index: 0;
+      transition: width 2s ease;
     }
 
-    .card:has(.inverted:hover) .tagline,
-    .card:has(.inverted:hover) .text,
-    .card:has(.inverted:hover) .name1,
-    .card:has(.inverted:hover) .post {
+    @keyframes fillsUp {
+      0% {
+        background-color: white;
+        color: rgb(0, 255, 170);
+      }
+
+      /* 50% {
+        background-color: rgb(172, 248, 255);
+        color: rgb(98, 255, 203);
+      } */
+
+      100% {
+        background-color: rgb(0, 255, 170);
+        color: white;
+      }
+
+    }
+
+    .card:hover::before {
+      width: 100%;
+    }
+
+    .card:has(.inverted:hover)::before {
+      width: 100%;
+    }
+
+    .card:has(.inverted:hover) {
+      cursor: pointer;
+      animation: fillsUp 2s forwards;
+    }
+
+    .card:hover .text,
+    .card:hover .name1,
+    .card:hover .tagline,
+    .card:hover .post,
+    .inverted {
       color: white;
+      position: relative;
+      z-index: 1;
     }
 
     .card .post {
@@ -126,6 +167,14 @@
       font-size: 0.9rem;
       margin-bottom: 0;
     }
+
+    .card .tagline,
+    .card .text,
+    .card .name1,
+    .card .post {
+      position: relative;
+      z-index: 1;
+    } 
 
     @media (max-width: 768px) {
       .customers {
