@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      background: linear-gradient(to top right, rgb(67, 208, 255), rgb(0, 110, 255), rgb(230, 68, 255), rgb(166, 0, 255));
+    }
+
+    .lighter-1 {
+      width: 400px;
+      height: 400px;
+      background-color: white;
+      opacity: 0.15;
+      border-radius: 10px;
+      transform: rotate(60deg);
+      position: absolute;
+      top: -40px;
+      left: -300px;
+    }
+
+    .lighter-2 {
+      width: 600px;
+      height: 600px;
+      background-color: white;
+      opacity: 0.15;
+      border-radius: 10px;
+      transform: rotate(60deg);
+      position: absolute;
+      top: 600px;
+      left: 300px;
+    }
+
+    .darker {
+      width: 600px;
+      height: 600px;
+      background-color: black;
+      opacity: 0.15;
+      border-radius: 10px;
+      transform: rotate(60deg);
+      position: absolute;
+      right: -500px;
+    }
+
+    .container {
+      width: 400px;
+      height: 800px;
+      background-color: wheat;
+      border-radius: 10px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="lighter-1"></div>
+  <div class="lighter-2"></div>
+  <div class="darker"></div>
+
+  <div class="container">
+    <form>
+      <h2 class="login">Login</h2>
+      <div class="name">
+        <label for="Username" class="username">Username</label>
+        <img src="user.png" alt="user" class="user-icon"><input type="text" placeholder="Type your username">
+      </div>
+      <div class="password">
+        <label for="password" class="password">Password</label>
+        <img src="lock.png" alt="lock" class="lock-icon"><input type="text" placeholder="Type your password">
+      </div>
+      <p class="forgot-password">Forgot password?</p>
+      <button class="login-btn">LOGIN</button>
+      <p class="or">Or Sign Up Using</p>
+      <div class="socials">
+        <img src="Facebook-1.png" alt="facebook" class="fb">
+        <img src="twitter.png" alt="twitter" class="twtr">
+        <img src="google-plus.png" alt="google plus" class="google">
+      </div>
+
+      <p class="no-account">Have no account yet?</p>
+      <button class="signup-btn">SIGN UP</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
