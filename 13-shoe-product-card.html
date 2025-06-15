@@ -9,51 +9,548 @@
   <style>
     body {
       background-color: rgb(35, 35, 35);
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .strk-price {
       color: white;
+    }
+
+    .square {
+      width: 125px;
+      height: 100px;
+      border: 15px solid orange;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 45px;
+      left: -40px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 15px solid orange;
+      position: absolute;
+      top: 590px;
+      left: -50px;
+    }
+
+    .triangle-1 {
+      height: 0;
+      width: 0;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-bottom: 70px solid yellow;
+      position: absolute;
+      right: 250px;
+      top: 60px;
+    }
+
+    .triangle-1-outer {
+      height: 0;
+      width: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid rgb(35, 35, 35);
+      position: absolute;
+      right: 260px;
+      top: 75px;
+    }
+
+    .triangle-2 {
+      height: 0;
+      width: 0;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-top: 70px solid silver;
+      position: absolute;
+      right: 385px;
+      top: 640px;
+    }
+
+    .triangle-2-outer {
+      height: 0;
+      width: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 40px solid rgb(35, 35, 35);
+      position: absolute;
+      right: 400px;
+      top: 650px;
+    }
+
+    .triangle-3 {
+      height: 0;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid silver;
+      position: absolute;
+      right: 1150px;
+      top: 540px;
+      z-index: 0;
+    }
+
+    .triangle-3-outer {
+      height: 0;
+      width: 0;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-top: 70px solid rgb(35, 35, 35);
+      position: absolute;
+      right: 1165px;
+      top: 550px;
+      z-index: 0;
+    }
+
+    .container {
+      width: 80%;
+      height: 450px;
+      background-color: rgb(30, 30, 30);
+    }
+
+    .left {
+      background-color: orange;
+      height: 100%;
+      width: 28%;
+      border-radius: 0 275px 275px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .shoe-pic {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      left: -100px;
+      top: -50px;
+      z-index: 6;
+    }
+
+    .left-arrow {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      bottom: 70px;
+      left: 100px;
+    }
+
+    .right-arrow {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      bottom: 70px;
+      left: 150px;
+    }
+
+    .blurred-1 {
+      width: 200px;
+      height: 750px;
+      position: absolute;
+      left: 0;
+      top: -20px;
+
+      background-color: rgba(255, 255, 255, 0.005);
+      /* add semi-transparent background */
+      backdrop-filter: blur(10px);
+      /* applies the blur */
+      -webkit-backdrop-filter: blur(10px);
+      /* Safari support */
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .blurred-2 {
+      width: 1200px;
+      height: 160px;
+      position: absolute;
+      left: 0;
+      top: -20px;
+      margin-left: 200px;
+
+      background-color: rgba(255, 255, 255, 0.005);
+      /* add semi-transparent background */
+      backdrop-filter: blur(10px);
+      /* applies the blur */
+      -webkit-backdrop-filter: blur(10px);
+      /* Safari support */
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .company {
+      color: orange;
+      position: absolute;
+      top: 130px;
+      z-index: 6;
+      left: 660px;
+      margin-top: 50px;
+    }
+
+    .upper-icons {
+      position: absolute;
+      top: 155px;
+      right: 150px;
+      margin-top: 10px;
+    }
+
+    .s-Icon,
+    .p-Icon,
+    .c-Icon {
+      margin: 20px;
+    }
+
+    .s-Icon:hover,
+    .c-Icon:hover,
+    .p-Icon:hover {
+      filter: brightness(0) saturate(100%) invert(56%) sepia(96%) saturate(749%) hue-rotate(0deg) brightness(101%) contrast(105%);
+      cursor: pointer;
+    }
+
+    .details {
+      position: fixed;
+      top: 280px;
+      left: 660px;
+    }
+
+    .title {
+      font-size: 35px;
+      position: fixed;
+      top: 320px;
+    }
+
+    .price {
+      position: fixed;
+      top: 380px;
+    }
+
+    .strk-price {
+      position: fixed;
+      top: 400px;
+      right: 760px;
+    }
+
+    del {
+      text-decoration-color: rgb(197, 128, 0);
+    }
+
+    .size {
+      position: fixed;
+      top: 410px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .size-7,
+    .size-8,
+    .size-9,
+    .size-10,
+    .size-11 {
+      margin: 50px;
+      margin-top: 0;
+    }
+
+    .size-7:hover,
+    .size-8:hover,
+    .size-9:hover,
+    .size-10:hover,
+    .size-11:hover {
+      color: orange;
+      cursor: pointer;
+    }
+
+    .color {
+      position: fixed;
+      top: 450px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .yellow-div {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: yellow;
+      border: 0;
+    }
+
+    .black-div {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: black;
+      border: 0;
+    }
+
+    .blue-div {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: cyan;
+      border: 0;
+    }
+
+    .yellow-div,
+    .black-div,
+    .blue-div {
+      margin: 35px;
+      margin-top: 0;
+    }
+
+    .yellow-div:hover,
+    .black-div:hover,
+    .blue-div:hover {
+      border: 2px solid orange;
+      cursor: pointer;
+    }
+
+    .s-toggle {
+      position: fixed;
+      margin-bottom: 50px;
+      top: 550px;
+      display: flex;
+    }
+
+    .c-toggle {
+      position: fixed;
+      top: 550px;
+      margin-left: 150px;
+      display: flex;
+    }
+
+    .s-toggle:hover,
+    .c-toggle:hover {
+      filter: brightness(0) saturate(100%) invert(56%) sepia(96%) saturate(749%) hue-rotate(0deg) brightness(101%) contrast(105%);
+      cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+      }
+
+      .size-7:hover,
+      .size-8:hover,
+      .size-9:hover,
+      .size-10:hover,
+      .size-11:hover {
+        color: orange;
+        cursor: pointer;
+      }
+
+      .left {
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shoe-pic {
+        width: 300px;
+        height: auto;
+        left: 0;
+        top: 0;
+        position: relative;
+      }
+
+      .details {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 20px;
+      }
+
+      .title,
+      .price,
+      .strk-price,
+      .size,
+      .color,
+      .s-toggle,
+      .c-toggle {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: auto;
+      }
+
+      .s-toggle,
+      .c-toggle {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+
+      .s-toggle:hover,
+      .c-toggle:hover {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(96%) saturate(749%) hue-rotate(0deg) brightness(101%) contrast(105%);
+        cursor: pointer;
+      }
+
+      .upper-icons {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .company {
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: center;
+      }
+
+      .yellow-div:hover,
+      .black-div:hover,
+      .blue-div:hover {
+        border: 2px solid orange;
+        cursor: pointer;
+      }
+
+      .triangle-1,
+      .triangle-1-outer,
+      .triangle-2,
+      .triangle-2-outer,
+      .triangle-3,
+      .triangle-3-outer,
+      .square,
+      .circle,
+      .blurred-1,
+      .blurred-2 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 0 10px;
+      }
+
+      .shoe-pic {
+        width: 250px;
+      }
+
+      .size-7:hover,
+      .size-8:hover,
+      .size-9:hover,
+      .size-10:hover,
+      .size-11:hover {
+        color: orange;
+        cursor: pointer;
+      }
+
+      .size p,
+      .color div {
+        margin: 10px;
+      }
+
+      .left-arrow,
+      .right-arrow {
+        position: relative;
+        bottom: 0;
+        margin: 10px;
+        left: 0;
+      }
+
+      .left {
+        flex-direction: column;
+      }
+
+      .s-toggle,
+      .c-toggle {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .s-toggle:hover,
+      .c-toggle:hover {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(96%) saturate(749%) hue-rotate(0deg) brightness(101%) contrast(105%);
+        cursor: pointer;
+      }
+
+      .s-toggle img,
+      .c-toggle img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .yellow-div:hover,
+      .black-div:hover,
+      .blue-div:hover {
+        border: 2px solid orange;
+        cursor: pointer;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <div class="blurred-1"></div>
+  <div class="blurred-2"></div>
   <div class="square"></div>
   <div class="circle"></div>
   <div class="triangle-1"></div>
+  <div class="triangle-1-outer"></div>
   <div class="triangle-2"></div>
+  <div class="triangle-2-outer"></div>
   <div class="triangle-3"></div>
+  <div class="triangle-3-outer"></div>
   <h2 class="bg-airmax">AIRMAX</h2>
 
   <div class="container">
     <div class="left">
-      <img src="sports-shoe.png" alt="shoe">
-      <img src="left-arrow.png" alt="left-wrrow"><img src="right-arrow.png" alt="right-arrow">
+      <img src="sports-shoe.png" alt="shoe" class="shoe-pic">
+      <img src="left-arrow.png" alt="left-arrow" class="left-arrow"><img src="right-arrow.png" class="right-arrow"
+        alt="right-arrow">
     </div>
 
-    <h2>Airmax</h2>
-    <img src="search.png" alt="search" width="20px" height="20px">
-    <img src="cart.png" alt="cart" width="20px" height="20px">
-    <img src="person.png" alt="person" width="20px" height="20px">
+    <h2 class="company">Airmax</h2>
+    <div class="upper-icons">
+      <img src="search.png" alt="search" width="20px" height="20px" class="s-Icon">
+      <img src="person.png" alt="person" width="20px" height="20px" class="p-Icon">
+      <img src="cart.png" alt="cart" width="20px" height="20px" class="c-Icon">
+    </div>
 
     <div class="details">
       <h2 class="winter-collection">Winter Collection</h2>
       <h2 class="title">Men White Sneakers</h2>
       <h3 class="price">₹2999</h3><del class="strk-price">₹4999</del>
-      <h3 class="size">
+      <h3 class="size">SIZE
         <p class="size-7">7</p>
         <p class="size-8">8</p>
         <p class="size-9">9</p>
         <p class="size-10">10</p>
         <p class="size-11">11</p>
       </h3>
-      <h3 class="color">COLOR</h3>
-      <div class="yellow-div"></div>
-      <div class="black-div"></div>
-      <div class="blue-div"></div>
-      <img src="suitcase.png" alt="suitcase" width="10px" height="10px">Buy Now
-      <img src="cart.png" alt="cart" width="10px" height="10px">Add To Cart
+      <h3 class="color">COLOR
+        <div class="yellow-div"></div>
+        <div class="black-div"></div>
+        <div class="blue-div"></div>
+      </h3>
+      <div class="toggles">
+        <div class="s-toggle">
+          <img src="suitcase.png" alt="suitcase" class="suitcase-toggle" width="25px" height="25px">Buy Now
+        </div>
+        <div class="c-toggle">
+          <img src="cart.png" alt="cart" class="cart-toggle" width="25px" height="25px">Add To Cart
+        </div>
+      </div>
     </div>
   </div>
 
