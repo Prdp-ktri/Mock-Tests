@@ -7,10 +7,80 @@
   <title>Document</title>
 
   <style>
+    .left {
+      position: relative;
+      width: 950px;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 255, 0, 0.3);
+      /* green tint */
+      z-index: 1;
+    }
+
+    .left img {
+      width: 100%;
+      display: block;
+    }
+
+
     .right {
       width: 600px;
-      background-color: white;
+      background-color: whitesmoke;
       height: auto;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .form {
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .email {}
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #terms {
+      position: fixed;
+      margin-right: 500px;
+      margin-top: 350px;
+    }
+
+    .terms-txt {
+      margin-left: 20px;
+      margin-top: 3px;
+      color: gray;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 200px;
+      height: 35px;
+      border: 0;
+      background: linear-gradient(lightgreen, rgb(18, 255, 18));
+      border-radius: 30px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: black;
+    }
+
+    .right-arrow {
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -19,10 +89,42 @@
 
   <div class="container">
     <div class="left">
-      <img src="korean.jpg" alt="" width="950px">
+      <div class="overlay"></div>
+      <img src="korean.jpg" alt="" width="950px" class="image">
     </div>
 
-    <div class="right"></div>
+    <div class="right">
+      <div class="form">
+        <h1 class="caption">Sign Up</h1>
+        <form>
+          <label for="name" class="fName" style="color: gray;">Full Name</label><br>
+          <input type="text" class="fName-input" value="Zachary Davis"
+            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><img
+            src="check.png" alt="green tick" width="20px" height="20px"
+            style="position: absolute; right: 115px; margin-top: 25px;"><br>
+          <label for="email" class="email" style="color: gray;">Email</label><br>
+          <input type="text" class="eMail-input" value="zachary-davis@example"
+            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><img
+            src="check.png" alt="green tick" width="20px" height="20px"
+            style="position: absolute; right: 115px; margin-top: 95px;"><br>
+          <label for="username" class="username" style="color: gray;">Username</label><br>
+          <input type="text" class="username-input" value="zacharydavis"
+            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><img
+            src="check.png" alt="green tick" width="20px" height="20px"
+            style="position: absolute; right: 115px; margin-top: 165px;"><br>
+          <label for="text" class="pw" style="color: gray;">Password</label><br>
+          <input type="text" class="pw-input" value="*******************" disabled
+            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><br>
+          <label for="text" class="rpt-pw" style="color: gray;">Repeat Password</label><br>
+          <input type="text" class="rptpw-input" value="*******************" disabled
+            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><br>
+          <input type="checkbox" name="terms" id="terms">
+          <div class="terms-txt">I agree to the <b>Terms of User</b><br></div>
+          <button class="btn">Sign Up</button><a href="11-korean-form.html" class="link">Sign In<img
+              src="right-arrow-black.png" class="right-arrow" alt="Sign In Page" width="20px" height="20px"></a><br>
+        </form>
+      </div>
+    </div>
   </div>
 
 </body>
