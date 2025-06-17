@@ -70,7 +70,7 @@
       width: 200px;
       height: 35px;
       border: 0;
-      background: linear-gradient(lightgreen, rgb(18, 255, 18));
+      background: linear-gradient(rgb(130, 130, 130), rgb(53, 60, 53));
       border-radius: 30px;
     }
 
@@ -90,7 +90,7 @@
   <div class="container">
     <div class="left">
       <div class="overlay"></div>
-      <img src="korean.jpg" alt="" width="950px" class="image">
+      <img src="korean.jpg" alt="" id="image-k" width="950px" class="image">
     </div>
 
     <div class="right">
@@ -99,19 +99,19 @@
         <form>
           <label for="name" class="fName" style="color: gray;">Full Name</label><br>
           <input type="text" class="fName-input" value="Zachary Davis"
-            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><img
-            src="check.png" alt="green tick" width="20px" height="20px"
-            style="position: absolute; right: 115px; margin-top: 25px;"><br>
+            style="width: 400px; height: 25px; border: 0; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"
+            onclick="clicked()"><img src="check.png" alt="green tick" width="20px" height="20px"
+            style="position: absolute; right: 150px; margin-top: 25px; display: none;" class="green-tick1"><br>
           <label for="email" class="email" style="color: gray;">Email</label><br>
           <input type="text" class="eMail-input" value="zachary-davis@example"
-            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><img
-            src="check.png" alt="green tick" width="20px" height="20px"
-            style="position: absolute; right: 115px; margin-top: 95px;"><br>
+            style="width: 400px; height: 25px; border: 0; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"
+            onclick="clicked()"><img src="check.png" alt="green tick" width="20px" height="20px"
+            style="position: absolute; right: 150px; margin-top: 95px; display: none;" class="green-tick2"><br>
           <label for="username" class="username" style="color: gray;">Username</label><br>
           <input type="text" class="username-input" value="zacharydavis"
-            style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><img
-            src="check.png" alt="green tick" width="20px" height="20px"
-            style="position: absolute; right: 115px; margin-top: 165px;"><br>
+            style="width: 400px; height: 25px; border: 0; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"
+            onclick="clicked()"><img src="check.png" alt="green tick" width="20px" height="20px"
+            style="position: absolute; right: 150px; margin-top: 165px; display: none;" class="green-tick3"><br>
           <label for="text" class="pw" style="color: gray;">Password</label><br>
           <input type="text" class="pw-input" value="*******************" disabled
             style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><br>
@@ -126,6 +126,59 @@
       </div>
     </div>
   </div>
+
+  <button class="chngImg">change Image</button>
+
+
+  <script>
+
+    let inp1 = document.querySelector(".fName-input");
+    let inp2 = document.querySelector(".eMail-input");
+    let inp3 = document.querySelector(".username-input");
+
+    let tick1 = document.querySelector('.green-tick1');
+    let tick2 = document.querySelector('.green-tick2');
+    let tick3 = document.querySelector('.green-tick3');
+    let checked = document.querySelector('#terms');
+    let button1 = document.querySelector('.btn');
+
+    inp1.addEventListener('click', () => {
+      inp1.style.borderBottom = "2px solid green";
+      tick1.style.display = 'block';
+    })
+
+    inp2.addEventListener('click', () => {
+      inp2.style.borderBottom = '2px solid green';
+      tick2.style.display = 'block';
+    })
+
+    inp3.addEventListener('click', () => {
+      inp3.style.borderBottom = "2px solid green";
+      tick3.style.display = 'block';
+    })
+
+    checked.addEventListener('change', () => {
+      if (checked.checked) {
+        button1.style.background = "linear-gradient(lightgreen, rgb(18, 255, 18))";
+      } else {
+        button1.style.background = "linear-gradient(rgb(130, 130, 130), rgb(53, 60, 53))";
+      }
+    })
+
+    let image1 = document.getElementById('image-k');
+    let changeImage = document.querySelector('.chngImg');
+
+
+
+    changeImage.addEventListener('click', () => {
+      if (image1.src.endsWith("korean.jpg")) {
+        image1.src = "josh.jpg";
+      } else {
+        image1.src = "korean.jpg";
+      }
+    })
+
+  </script>
 
 </body>
 
