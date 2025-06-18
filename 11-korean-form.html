@@ -72,6 +72,7 @@
       border: 0;
       background: linear-gradient(rgb(130, 130, 130), rgb(53, 60, 53));
       border-radius: 30px;
+      font-weight: bold;
     }
 
     .link {
@@ -81,6 +82,11 @@
 
     .right-arrow {
       margin-top: 20px;
+    }
+
+    input {
+      outline: none;
+      border: none;
     }
   </style>
 </head>
@@ -97,25 +103,25 @@
       <div class="form">
         <h1 class="caption">Sign Up</h1>
         <form>
-          <label for="name" class="fName" style="color: gray;">Full Name</label><br>
-          <input type="text" class="fName-input" value="Zachary Davis"
+          <label for="firstName" class="fName" style="color: gray;">Full Name</label><br>
+          <input type="text" class="fName-input" value=""
             style="width: 400px; height: 25px; border: 0; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"
             onclick="clicked()"><img src="check.png" alt="green tick" width="20px" height="20px"
             style="position: absolute; right: 150px; margin-top: 25px; display: none;" class="green-tick1"><br>
-          <label for="email" class="email" style="color: gray;">Email</label><br>
-          <input type="text" class="eMail-input" value="zachary-davis@example"
+          <label for="Email" class="email" style="color: gray;">Email</label><br>
+          <input type="text" class="eMail-input" value=""
             style="width: 400px; height: 25px; border: 0; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"
             onclick="clicked()"><img src="check.png" alt="green tick" width="20px" height="20px"
             style="position: absolute; right: 150px; margin-top: 95px; display: none;" class="green-tick2"><br>
           <label for="username" class="username" style="color: gray;">Username</label><br>
-          <input type="text" class="username-input" value="zacharydavis"
+          <input type="text" class="username-input" value=""
             style="width: 400px; height: 25px; border: 0; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"
             onclick="clicked()"><img src="check.png" alt="green tick" width="20px" height="20px"
             style="position: absolute; right: 150px; margin-top: 165px; display: none;" class="green-tick3"><br>
-          <label for="text" class="pw" style="color: gray;">Password</label><br>
+          <label for="password" class="pw" style="color: gray;">Password</label><br>
           <input type="text" class="pw-input" value="*******************" disabled
             style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><br>
-          <label for="text" class="rpt-pw" style="color: gray;">Repeat Password</label><br>
+          <label for="rpt-password" class="rpt-pw" style="color: gray;">Repeat Password</label><br>
           <input type="text" class="rptpw-input" value="*******************" disabled
             style="width: 400px; height: 25px; border: 0; border-bottom: 2px solid lightgreen; font-size: 15px; color: rgb(97, 97, 97); margin-top: -15px;"><br>
           <input type="checkbox" name="terms" id="terms">
@@ -143,25 +149,48 @@
     let button1 = document.querySelector('.btn');
 
     inp1.addEventListener('click', () => {
-      inp1.style.borderBottom = "2px solid green";
-      tick1.style.display = 'block';
+      if (inp1.value === "Zachary Davis") {
+        inp1.style.border = "none";
+        inp1.style.borderBottom = "2px solid green";
+        tick1.style.display = 'block';
+      } else {
+        inp1.style.border = "2px solid red";
+        tick1.style.display = "none";
+      }
     })
 
     inp2.addEventListener('click', () => {
-      inp2.style.borderBottom = '2px solid green';
-      tick2.style.display = 'block';
+      if (inp2.value === "zacharydavis@example.com") {
+        inp2.style.border = "none";
+        inp2.style.borderBottom = "2px solid green";
+        tick2.style.display = 'block';
+      } else {
+        inp2.style.border = "2px solid red";
+        tick2.style.display = "none";
+      }
     })
 
+    let uName = ["zacharydavis", "pradeepkhatri", "bhavingarg"];
+
     inp3.addEventListener('click', () => {
-      inp3.style.borderBottom = "2px solid green";
-      tick3.style.display = 'block';
+      if (inp3.value === "zacharydavis") {
+        inp3.style.border = "none";
+        inp3.style.borderBottom = "2px solid green";
+        tick3.style.display = 'block';
+      } else {
+        inp3.style.border = "2px solid red";
+        tick3.style.display = 'none';
+      }
     })
 
     checked.addEventListener('change', () => {
       if (checked.checked) {
         button1.style.background = "linear-gradient(lightgreen, rgb(18, 255, 18))";
+        button1.style.color = "white";
+        button1.style.fontWeight = "bold";
       } else {
         button1.style.background = "linear-gradient(rgb(130, 130, 130), rgb(53, 60, 53))";
+        button1.style.fontWeight = "bold";
       }
     })
 
@@ -173,8 +202,12 @@
     changeImage.addEventListener('click', () => {
       if (image1.src.endsWith("korean.jpg")) {
         image1.src = "josh.jpg";
-      } else {
-        image1.src = "korean.jpg";
+      } else if (image1.src.endsWith("josh.jpg")) {
+        image1.src = "pankaj.jpg";
+      } else if (image1.src.endsWith("pankaj.jpg")) {
+        image1.src = "peon.jpg"
+      } else if (image1.src.endsWith("peon.jpg")) {
+        image1.src = "korean.jpg"
       }
     })
 
