@@ -148,7 +148,7 @@
     let checked = document.querySelector('#terms');
     let button1 = document.querySelector('.btn');
 
-    inp1.addEventListener('click', () => {
+    inp1.addEventListener('input', () => {
       if (inp1.value === "Zachary Davis") {
         inp1.style.border = "none";
         inp1.style.borderBottom = "2px solid green";
@@ -159,7 +159,7 @@
       }
     })
 
-    inp2.addEventListener('click', () => {
+    inp2.addEventListener('input', () => {
       if (inp2.value === "zacharydavis@example.com") {
         inp2.style.border = "none";
         inp2.style.borderBottom = "2px solid green";
@@ -172,7 +172,7 @@
 
     let uName = ["zacharydavis", "pradeepkhatri", "bhavingarg"];
 
-    inp3.addEventListener('click', () => {
+    inp3.addEventListener('input', () => {
       if (inp3.value === "zacharydavis") {
         inp3.style.border = "none";
         inp3.style.borderBottom = "2px solid green";
@@ -184,7 +184,7 @@
     })
 
     checked.addEventListener('change', () => {
-      if (checked.checked) {
+      if (checked.checked && inp3.value === "zacharydavis" && inp2.value === "zacharydavis@example.com" && inp1.value === "Zachary Davis") {
         button1.style.background = "linear-gradient(lightgreen, rgb(18, 255, 18))";
         button1.style.color = "white";
         button1.style.fontWeight = "bold";
